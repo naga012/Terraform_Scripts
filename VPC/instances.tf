@@ -21,7 +21,7 @@ resource "aws_instance" "Linux_servers" {
   vpc_security_group_ids = [aws_security_group.demo_sg.id]
   subnet_id              = element(aws_subnet.subnets.*.id, count.index)
   key_name               = var.key_name
-  user_data              = file("init_script.sh")
+ # user_data              = file("init_script.sh")
   tags = {
     Name = "Linux_Server_${count.index + 1}"
   }
