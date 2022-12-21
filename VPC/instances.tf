@@ -8,13 +8,13 @@ resource "aws_instance" "Demo_Server" {
   key_name               = var.key_name
 
   tags = {
-    Name = "UbuntuServer"
+    Name = "DemoServer"
     Type = "Docker"
   }
 
 }
 # 2 Instance Of Redhat Servers(t2.micro)
-resource "aws_instance" "redhat_servers" {
+resource "aws_instance" "Linux_servers" {
   count                  = 2
   ami                    = var.redhatami
   instance_type          = "t2.micro"
@@ -23,7 +23,7 @@ resource "aws_instance" "redhat_servers" {
   key_name               = var.key_name
   user_data              = file("init_script.sh")
   tags = {
-    Name = "Redhat_Server_${count.index + 1}"
+    Name = "Linux_Server_${count.index + 1}"
   }
 
 
