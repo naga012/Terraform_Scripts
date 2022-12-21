@@ -17,11 +17,11 @@ variable "availability_zones" {
   default = ["ap-south-1a", "ap-south-1b"]
 }
 variable "ubuntuami" {
-  default = "ami-0b44050b2d893d5f7"
+  default = "ami-0cca134ec43cf708f"
 }
 variable "redhatami" {
-  default = "ami-052c08d70def0ac62"
+  default = "ami-0cca134ec43cf708f"
 }
 variable "key_name" {
-  default = "devops"
+  default = "Windowsec2"
 }
